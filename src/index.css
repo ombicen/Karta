@@ -1,0 +1,123 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body {
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  height: 100svh;
+
+}
+div#smcm-map-root{
+  position: absolute;
+  height: 100dvh; 
+  width: 100vw;
+  &>div{
+    height: 100%;
+    &>div{
+      height: 100%;
+    }
+  }
+  & .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before{
+    background-color: #2337ec ;
+  }
+  & .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+    background-color: #2337ec;
+  }
+}
+.fp-watermark {
+  display: none !important;
+}
+@media (max-height: 720px) and (min-width: 700px) {
+  html,body {
+    font-size: 10px;
+  }
+  .side-panels{
+    margin-top:8rem;
+  }
+}
+@media (min-height: 720px) and (min-width: 700px){
+  html,body {
+    font-size: 14px;
+  }
+  .side-panels{
+    margin-top:8rem;
+  }
+}
+@media (min-height: 1250px) and (min-width: 700px){
+  html,body {
+    font-size: 22px;
+  }
+  .side-panels{
+    margin-top:8rem;
+  }
+}
+#left-slider .slick-slide{
+  height: inherit !important;
+  float:none !important;
+  &>div{
+    height: 100%;
+    &>div{
+      
+      display: flex !important;
+      flex-flow: column nowrap;
+      height: 100%;
+    }
+  }
+}
+#left-slider .slick-list{
+  height: inherit !important;
+}
+ 
+#left-slider .slick-track{
+  display:flex !important;
+  flex-flow:row nowrap;
+  height: inherit !important;
+} 
+.right-panel{
+
+ & ul.slick-dots {
+  position: relative;
+}
+
+& ul.slick-dots {
+  display: flex !important;
+  flex-flow: column;
+  width: 20px;
+  flex: 0;
+  top: 50%;
+  right: 0;
+  position: absolute;
+  transform: translateY(-20%);
+}
+
+& ul.slick-dots > li {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+}
+& .slick-dots li button:before{
+  color:#A6AFF6;
+  opacity: 1;
+  transition: all 0.3s;
+  font-size: 8px;
+}
+& .slick-dots li.slick-active button:before{
+  color:#2337ec;
+  font-size: 16px;
+
+}
+& .slick-dots li:hover button:before{
+  color:#2337ec;
+
+}
+& ul.slick-dots > li > button {
+  margin: 0;
+  padding: 0;
+}
+
+& .slick-slider.flex.flex-col.slick-vertical.slick-initialized {
+  position: relative;
+}
+}
