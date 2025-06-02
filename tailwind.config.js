@@ -9,6 +9,13 @@ module.exports = {
         sans: ["Neue Haas Grotesk Display Pro", "sans-serif"],
       },
     },
+    screens: {
+      sm: "1100px",
+      md: "1100px",
+      lg: "1100px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
   },
   variants: {
     extend: {},
