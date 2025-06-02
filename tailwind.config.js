@@ -1,3 +1,4 @@
+const { heroui } = require("@heroui/react");
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Adjust this according to your file types
@@ -21,5 +22,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [heroui()],
 };
