@@ -39,6 +39,8 @@ import InitiativeSlider from "./InitiativeSlider";
 import Sponsorer from "./Sponsorer";
 import VertScroll from "./VertScroll";
 
+const mobileBreakpoint = 1100;
+
 // --- Utility Functions ---
 const removeLastS = (str) => (str.endsWith("s") ? str.slice(0, -1) : str);
 const sanitizeEmail = (email) =>
@@ -552,7 +554,7 @@ const SwedenMap = ({
           selectedRegion?.properties.LnKod === d.properties.LnKod ? null : d
         );
 
-        if (windowDimensions.width < 768) {
+        if (windowDimensions.width < mobileBreakpoint) {
           onOpen();
         }
       });
@@ -642,7 +644,7 @@ const SwedenMap = ({
           if (municipalIndex === undefined) return;
           setSelectedIndex(municipalIndex);
 
-          if (windowDimensions.width < 768) onOpen();
+          if (windowDimensions.width < mobileBreakpoint) onOpen();
         });
     } else {
       svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
@@ -700,7 +702,7 @@ const SwedenMap = ({
   ]);
   useEffect(() => {
     //reset zoom on mobile
-    if (windowDimensions.width < 768) {
+    if (windowDimensions.width < mobileBreakpoint) {
       if (!isOpen) {
         setSelectedRegion(null);
         setSelectedMunicipal(null);
@@ -933,7 +935,7 @@ const SwedenMap = ({
         </div>
       </div>
 
-      {windowDimensions.width < 768 && (
+      {windowDimensions.width < mobileBreakpoint && (
         <>
           <AxelssonModal
             isOpen={isOpen}
