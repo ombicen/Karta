@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Adjust this according to your file types
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "media", // eller 'media' eller 'class'
   theme: {
